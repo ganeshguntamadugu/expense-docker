@@ -2,9 +2,12 @@ FROM node:20
 
 EXPOSE 8080
 
-RUN mkdir /opt/server
+ENV DB_HOST=expense_mysql \
+    DB_USER=expense \
+    DB_PWD=ExpenseApp@1 \
+    DB_DATABASE=transactions
 
-USER expense
+RUN mkdir /opt/server
 
 WORKDIR /opt/server
 
@@ -14,9 +17,7 @@ COPY code/*.js .
 
 RUN npm install
 
+USER expense
+
 CMD [ "node", "index.js" ]
 
-ENV DB_HOST=expense_mysql \
-    DB_USER=expense \
-    DB_PWD=ExpenseApp@1 \
-    DB_DATABASE=transactions
