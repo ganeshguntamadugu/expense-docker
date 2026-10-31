@@ -17,8 +17,9 @@ COPY code/package.json .
 
 COPY code/*.js .
 
-RUN npm install \
-    chown -R expense:expense /opt/server
+RUN npm install 
+    
+RUN chown -R expense:expense /opt/server
 
 USER expense
 
