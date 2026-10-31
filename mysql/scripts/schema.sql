@@ -7,6 +7,6 @@ CREATE TABLE IF NOT EXISTS transactions (
     description VARCHAR(255)
 );
 
-CREATE USER IF NOT EXISTS 'expense'@'%' IDENTIFIED BY 'ganesh@321';
+CREATE USER IF NOT EXISTS 'expense'@'%' IDENTIFIED BY 'gana@123';
 GRANT ALL ON transactions.* TO 'expense'@'%';
 FLUSH PRIVILEGES;
