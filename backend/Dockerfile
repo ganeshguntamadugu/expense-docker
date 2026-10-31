@@ -7,8 +7,9 @@ ENV DB_HOST=expense_mysql \
     DB_PWD=ExpenseApp@1 \
     DB_DATABASE=transactions
 
-RUN useradd -m expense \
-    mkdir /opt/server
+RUN useradd -m expense
+    
+RUN mkdir /opt/server
 
 WORKDIR /opt/server
 
