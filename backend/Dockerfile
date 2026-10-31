@@ -7,7 +7,8 @@ ENV DB_HOST=expense_mysql \
     DB_PWD=ExpenseApp@1 \
     DB_DATABASE=transactions
 
-RUN mkdir /opt/server
+RUN useradd -m expense \
+    mkdir /opt/server
 
 WORKDIR /opt/server
 
@@ -15,7 +16,8 @@ COPY code/package.json .
 
 COPY code/*.js .
 
-RUN npm install
+RUN npm install \
+    chown -R expense:expense /opt/server
 
 USER expense
 
