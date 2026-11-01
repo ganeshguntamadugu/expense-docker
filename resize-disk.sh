@@ -12,6 +12,8 @@ lsblk
 sudo lvextend -l +50%FREE /dev/RootVG/rootVol
 sudo lvextend -l +50%FREE /dev/RootVG/varVol
 
+lsblk
+
 df -dT
 
 # After extending the logical volumes, resize the filesystems to utilize the additional space.
@@ -21,4 +23,4 @@ sudo xfs_growfs /
 # For the /var filesystem:
 sudo xfs_growfs /var
 
-df -dT
+df -hT
