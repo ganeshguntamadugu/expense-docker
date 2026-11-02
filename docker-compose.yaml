@@ -1,8 +1,11 @@
 # version: "3"
 networks:
   expense:
+    name: expense
+    driver: bridge
 volumes:
   mysql_data:  # docker volume create mysql
+    name: mysql_data
 services:
   mysql:
     image: ganeshguntamadugu/mysql:v1
