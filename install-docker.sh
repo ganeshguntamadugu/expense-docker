@@ -8,5 +8,5 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker
 sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 sudo systemctl start docker
 sudo systemctl enable docker
-usermod -aG docker ec2-user
+sudo usermod -aG docker ec2-user
 echo -e "$R Logout and Login again $N"
