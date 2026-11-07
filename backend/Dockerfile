@@ -6,7 +6,7 @@ RUN npm install
 
 FROM node:20.18.0-alpine3.20
 EXPOSE 8080
-ENV DB_HOST=expense_mysql \
+ENV DB_HOST=mysql \
     DB_USER=expense \
     DB_PWD=ExpenseApp@1 \
     DB_DATABASE=transactions
