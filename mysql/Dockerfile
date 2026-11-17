@@ -11,5 +11,5 @@ RUN groupadd expense && \
 
 ADD scripts/*.sql /docker-entrypoint-initdb.d
 
-# USER expense
+USER expense
     
