@@ -1,4 +1,4 @@
-FROM mysql:8.0
+FROM mysql:8.0.40
 
 ENV MYSQL_ROOT_PASSWORD=ExpenseApp@1
     # MYSQL_DATABASE=gangs\
